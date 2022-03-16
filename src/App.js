@@ -22,7 +22,7 @@ const values = {
 function App() {
   const [choices, setChoices] = useState(initial_values.choices);
   const [addChoiceValue, setAddChoiceValue] = useState('');
-  const [label, setLabel] = useState(values.defaultValue);
+  const [label, setLabel] = useState(values.label);
   const [checked, setChecked] = useState(values.required);
   const [defaultValue, setDefaultValue] = useState(values.defaultValue);
   function removeChoice(choice) {
@@ -120,7 +120,7 @@ function App() {
                   <td>Type</td>
                   <td>
                     <div className="d-flex align-items-center">
-                      Multi-select <input className="form-check-input ms-3 me-1" type="checkbox" value={checked} onChange={handleRequiredChange} id="flexCheckDefault" />
+                      Multi-select <input className="form-check-input ms-3 me-1" type="checkbox" defaultChecked={checked} value={checked} onChange={handleRequiredChange} id="flexCheckDefault" />
                       <label>
                         A value is required
                       </label>
